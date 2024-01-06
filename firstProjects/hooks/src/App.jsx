@@ -11,8 +11,26 @@ const AddValue=()=>{
     console.error("value must less then 20")
   }else{
     console.log("Add value",CurrCounter)
-    CurrCounter=CurrCounter+1;
-    SetCounter(CurrCounter);
+ // in this senrio Not Work can add or remove multiple
+    // SetCounter(CurrCounter+1);
+    // SetCounter(CurrCounter+1);
+    // SetCounter(CurrCounter+1);
+    // SetCounter(CurrCounter+1);
+ // in this senrio Not Work can add or remove multiple
+
+
+        // in this senrio you can add or remove multiple
+
+    SetCounter((pre)=>pre+1);
+    SetCounter((pre)=>pre+1);
+    SetCounter((pre)=>pre+1);
+    SetCounter((pre)=>pre+1);
+    SetCounter((pre)=>pre+1);
+        // in this senrio you can add or remove multiple
+ // as well you can do that
+    // CurrCounter=CurrCounter+1;
+    // SetCounter(CurrCounter);
+     // as well you can do that
     console.log("Add value",CurrCounter)
   }
 
@@ -22,8 +40,28 @@ const RemoveValue=()=>{
     console.error("CurrCounter cant goes to negative values")
   }else{
     console.log("Remove value",CurrCounter)
-    CurrCounter=CurrCounter-1;
-    SetCounter(CurrCounter);
+    // in this senrio you can add or remove multiple
+    SetCounter((pre)=>pre-1);
+    SetCounter((pre)=>pre-1);
+    SetCounter((pre)=>pre-1);
+    SetCounter((pre)=>pre-1);
+    // in this senrio you can add or remove multiple
+
+        // in this senrio Not Work can add or remove multiple
+
+    // SetCounter(CurrCounter-1);
+    // SetCounter(CurrCounter-1);
+    // SetCounter(CurrCounter-1);
+    // SetCounter(CurrCounter-1);
+
+        // in this senrio Not Work can add or remove multiple
+
+        // as well you can do that
+
+    // CurrCounter=CurrCounter-1;
+    // SetCounter(CurrCounter);
+        // as well you can do that
+
     console.log("Remove value",CurrCounter)
   }
 
