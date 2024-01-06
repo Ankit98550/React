@@ -4,21 +4,28 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-// let counter=6;
+let heightValue=20;
 let [CurrCounter,SetCounter]=useState(6)
 const AddValue=()=>{
-  console.log("Add value",CurrCounter)
-  CurrCounter=CurrCounter+1;
-  SetCounter(CurrCounter);
-  console.log("Add value",CurrCounter)
+  if(CurrCounter>=heightValue){
+    console.error("value must less then 20")
+  }else{
+    console.log("Add value",CurrCounter)
+    CurrCounter=CurrCounter+1;
+    SetCounter(CurrCounter);
+    console.log("Add value",CurrCounter)
+  }
 
 }
 const RemoveValue=()=>{
-  console.log("Remove value",CurrCounter)
-
-  CurrCounter=CurrCounter-1;
-  SetCounter(CurrCounter);
-  console.log("Remove value",CurrCounter)
+  if(CurrCounter<=0){
+    console.error("CurrCounter cant goes to negative values")
+  }else{
+    console.log("Remove value",CurrCounter)
+    CurrCounter=CurrCounter-1;
+    SetCounter(CurrCounter);
+    console.log("Remove value",CurrCounter)
+  }
 
 }
   return (
